@@ -15,13 +15,13 @@ const extensionGlob = `*{${paths.extensions.join(',')}}*`
 const packPaths = sync(join(paths.source, paths.entry, extensionGlob))
 
 module.exports = {
-  entry: packPaths.reduce(
-    (map, entry) => {
-      const localMap = map
-      localMap[basename(entry, extname(entry))] = resolve(entry)
-      return localMap
-    }, {}
-  ),
+
+  entry: [
+    'es5-shim/es5-shim',
+    'es5-shim/es5-sham',
+    'babel-polyfill',
+    'HelloWorld/startup/registration',
+  ],
 
   output: { filename: '[name].js', path: resolve(paths.output, paths.entry) },
 
@@ -42,10 +42,10 @@ module.exports = {
     modules: [
       resolve(paths.source),
       resolve(paths.node_modules)
-    ]
+    ],
+    alias: {
+      react: join(__dirname, '../../', paths.node_modules, '/react'),
+      'react-dom': join(__dirname, '../../', paths.node_modules, '/react-dom'),
+    },
   },
-
-  resolveLoader: {
-    modules: [paths.node_modules]
-  }
 }

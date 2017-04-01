@@ -1,11 +1,11 @@
 # Restart webpack-watcher or webpack-dev-server if you make changes here
 default: &default
   config: config/webpack
-  entry: packs
+  entry: HelloWorld/startup
   output: public
   manifest: manifest.json
-  node_modules: node_modules
-  source: app/javascript
+  node_modules: client/node_modules
+  source: client/app/bundles
   extensions:
     - .coffee
     - .js
