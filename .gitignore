@@ -25,3 +25,5 @@ node_modules
 
 # Generated js bundles
 /app/assets/webpack/*
+/public/packs
+/node_modules

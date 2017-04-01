@@ -7,6 +7,8 @@ end
 
 gem 'react_on_rails', '6.9.1'
 
+gem 'webpacker', github: 'rails/webpacker' 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 # Use sqlite3 as the database for Active Record
