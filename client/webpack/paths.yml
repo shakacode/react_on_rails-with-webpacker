@@ -1,6 +1,6 @@
 # Restart webpack-watcher or webpack-dev-server if you make changes here
 default: &default
-  config: config/webpack
+  config: client/webpack
   entry: HelloWorld/startup
   output: public
   manifest: manifest.json
