@@ -19,7 +19,7 @@ module.exports = {
     'HelloWorld/startup/registration',
   ],
 
-  output: { filename: '[name].js', path: resolve(paths.output, paths.entry) },
+  output: { filename: '[name].js', path: resolve(paths.output) },
 
   module: {
     rules: readdirSync(loadersDir).map(file => (

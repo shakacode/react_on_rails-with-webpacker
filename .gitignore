@@ -24,5 +24,5 @@ npm-debug.log*
 node_modules
 
 # Generated js bundles
-/public/HelloWorld/*
+/public/webpack/*
 /node_modules

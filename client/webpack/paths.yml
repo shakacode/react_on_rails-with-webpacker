@@ -2,7 +2,7 @@
 default: &default
   config: client/webpack
   entry: HelloWorld/startup
-  output: public
+  output: public/webpack
   manifest: manifest.json
   node_modules: client/node_modules
   source: client/app/bundles
