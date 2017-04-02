@@ -40,4 +40,8 @@ module.exports = {
       resolve(paths.node_modules),
     ],
   },
+
+  resolveLoader: {
+    modules: [paths.node_modules],
+  },
 };

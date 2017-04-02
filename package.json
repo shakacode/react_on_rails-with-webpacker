@@ -13,6 +13,5 @@
     "test": "rspec"
   },
   "dependencies": {
-    "babel-loader": "^6.4.1"
   }
 }
