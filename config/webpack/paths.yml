@@ -1,24 +1,17 @@
 # Restart webpack-watcher or webpack-dev-server if you make changes here
 default: &default
-  config: client/webpack
+  config: client
   entry: HelloWorld/startup
-  output: public/webpack
+  output: public/assets/webpack
   manifest: manifest.json
   node_modules: client/node_modules
   source: client/app/bundles
   extensions:
-    - .coffee
     - .js
     - .jsx
-    - .ts
-    - .vue
     - .sass
     - .scss
     - .css
-    - .png
-    - .svg
-    - .gif
-    - .jpeg
 
 development:
   <<: *default

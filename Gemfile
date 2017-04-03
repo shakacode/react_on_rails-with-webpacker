@@ -7,7 +7,8 @@ end
 
 gem 'react_on_rails', '6.9.1'
 
-gem 'webpacker', github: 'rails/webpacker' 
+# TODO: fix the version when released
+gem 'webpacker', github: 'rails/webpacker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'

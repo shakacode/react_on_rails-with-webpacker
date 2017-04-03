@@ -24,5 +24,4 @@ npm-debug.log*
 node_modules
 
 # Generated js bundles
-/public/webpack/*
-/node_modules
+/public/assets/webpack/*
