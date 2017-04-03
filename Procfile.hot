@@ -1,2 +1,2 @@
 web: rails s -p 3000
-client: sh -c 'rm -r public/HelloWorld/* || true && ./bin/webpack-dev-server && cd client && bundle exec rake react_on_rails:locale'
+client: sh -c 'rm -r public/webpack/* || true && ./bin/webpack-dev-server && cd client && bundle exec rake react_on_rails:locale'
