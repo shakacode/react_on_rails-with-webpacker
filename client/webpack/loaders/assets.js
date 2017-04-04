@@ -1,4 +1,4 @@
-const { env, publicPath } = require('../configuration.js');
+const { env, publicPath } = require('../webpackConfigLoader.js');
 
 module.exports = {
   test: /\.(jpeg|png|gif|svg|eot|ttf|woff|woff2)$/i,
