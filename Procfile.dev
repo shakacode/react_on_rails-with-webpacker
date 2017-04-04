@@ -1,2 +1,2 @@
 web: rails s -p 3000
-client: sh -c './bin/webpack && ./bin/webpack-watcher'
+client: sh -c 'cd client && yarn run build:development'

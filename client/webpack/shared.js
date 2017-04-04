@@ -13,13 +13,13 @@ const { env, paths, publicPath, loadersDir } = require('./configuration.js');
 module.exports = {
 
   entry: [
-    'es5-shim/es5-shim',
-    'es5-shim/es5-sham',
-    'babel-polyfill',
-    'HelloWorld/startup/registration',
+    // 'es5-shim/es5-shim',
+    // 'es5-shim/es5-sham',
+    // 'babel-polyfill',
+    paths.entry,
   ],
 
-  output: { filename: '[name].js', path: resolve(paths.output) },
+  output: { filename: '[name].js', path: resolve('..', paths.output) },
 
   module: {
     rules: readdirSync(loadersDir).map(file => (
@@ -36,12 +36,14 @@ module.exports = {
   resolve: {
     extensions: paths.extensions,
     modules: [
-      resolve(paths.source),
-      resolve(paths.node_modules),
+      // resolve(paths.config, paths.source),
+      // resolve(paths.config, paths.node_modules),
+      resolve('..', paths.source),
+      resolve('..', paths.node_modules),
     ],
   },
 
   resolveLoader: {
-    modules: [paths.node_modules],
+    modules: ['..', paths.node_modules],
   },
 };
