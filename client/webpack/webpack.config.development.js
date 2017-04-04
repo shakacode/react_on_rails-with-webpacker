@@ -1,7 +1,5 @@
-// Note: You must restart bin/webpack-watcher for changes to take effect
-
 const merge = require('webpack-merge');
-const sharedConfig = require('./shared.js');
+const sharedConfig = require('./webpack.config.base.js');
 
 module.exports = merge(sharedConfig, {
   devtool: 'sourcemap',

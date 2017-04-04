@@ -1,4 +1,3 @@
-// Note: You must restart bin/webpack-watcher for changes to take effect
 /* eslint global-require: 0 */
 /* eslint import/no-dynamic-require: 0 */
 
@@ -7,17 +6,12 @@ const { join, resolve } = require('path');
 const { readdirSync } = require('fs');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
-const { env, paths, publicPath, loadersDir } = require('./configuration.js');
+const { env, paths, publicPath, loadersDir } = require('./webpackConfigLoader.js');
 
 
 module.exports = {
 
-  entry: [
-    // 'es5-shim/es5-shim',
-    // 'es5-shim/es5-sham',
-    // 'babel-polyfill',
-    paths.entry,
-  ],
+  entry: paths.entry,
 
   output: { filename: '[name].js', path: resolve('..', paths.output) },
 
@@ -36,8 +30,6 @@ module.exports = {
   resolve: {
     extensions: paths.extensions,
     modules: [
-      // resolve(paths.config, paths.source),
-      // resolve(paths.config, paths.node_modules),
       resolve('..', paths.source),
       resolve('..', paths.node_modules),
     ],
