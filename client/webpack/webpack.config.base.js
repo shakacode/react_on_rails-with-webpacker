@@ -11,9 +11,19 @@ const { env, paths, publicPath, loadersDir } = require('./webpackConfigLoader.js
 
 module.exports = {
 
-  entry: paths.entry,
+  entry: {
+    vendor: [
+      'es5-shim/es5-shim',
+      'es5-shim/es5-sham',
+      'babel-polyfill',
+    ],
 
-  output: { filename: '[name].js', path: resolve('..', paths.output) },
+    main: [
+      'bundles/HelloWorld/startup/registration',
+    ],
+  },
+
+  output: { filename: '[name]-bundle.js', path: resolve('..', paths.output) },
 
   module: {
     rules: readdirSync(loadersDir).map(file => (
@@ -25,6 +35,19 @@ module.exports = {
     new webpack.EnvironmentPlugin(JSON.parse(JSON.stringify(env))),
     new ExtractTextPlugin('[name]-[hash].css'),
     new ManifestPlugin({ fileName: paths.manifest, publicPath, writeToFileEmit: true }),
+    new webpack.optimize.CommonsChunkPlugin({
+
+      // This name 'vendor' ties into the entry definition
+      name: 'vendor',
+
+      // We don't want the default vendor.js name
+      filename: 'vendor-bundle.js',
+
+      // Passing Infinity just creates the commons chunk, but moves no modules into it.
+      // In other words, we only put what's in the vendor entry definition in vendor-bundle.js
+      minChunks: Infinity,
+
+    }),
   ],
 
   resolve: {

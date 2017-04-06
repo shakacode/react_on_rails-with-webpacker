@@ -9,7 +9,7 @@ module.exports = merge(devConfig, {
     port: devServer.port,
     compress: true,
     historyApiFallback: true,
-    contentBase: resolve(paths.output, paths.entry),
+    contentBase: resolve(paths.output),
     publicPath,
   },
 });

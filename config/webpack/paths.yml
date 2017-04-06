@@ -1,15 +1,10 @@
 # Restart webpack-watcher or webpack-dev-server if you make changes here
 default: &default
   config: client/webpack
-  entry:
-    - HelloWorld/startup/registration
-    - es5-shim/es5-shim
-    - es5-shim/es5-sham
-    - babel-polyfill
   output: public/assets/webpack
   manifest: manifest.json
   node_modules: client/node_modules
-  source: client/app/bundles
+  source: client/app
   extensions:
     - .js
     - .jsx
