@@ -1,7 +1,8 @@
 # Restart webpack-watcher or webpack-dev-server if you make changes here
 default: &default
   config: client/webpack
-  output: public/assets/webpack
+  entry: assets/webpack
+  output: public
   manifest: manifest.json
   node_modules: client/node_modules
   source: client/app

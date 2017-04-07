@@ -7,9 +7,9 @@
     "npm": "4.1.1"
   },
   "scripts": {
-    "build:test": "NODE_ENV=test webpack --config --config webpack/webpack.config.test.js",
-    "build:production": "NODE_ENV=production webpack --config webpack/webpack.config.production.js",
-    "build:development": "NODE_ENV=development webpack -w --config webpack/webpack.config.development.js",
+    "build:test": "NODE_ENV=test webpack --config webpack.client.rails.build.config.js",
+    "build:production:client": "NODE_ENV=production webpack --config webpack.client.rails.build.config.js",
+    "build:dev:client": "NODE_ENV=development webpack -w --config webpack.client.rails.build.config.js",
     "lint": "eslint --ext .js,.jsx ."
   },
   "cacheDirectories": ["node_modules", "client/node_modules"],
