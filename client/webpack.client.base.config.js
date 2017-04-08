@@ -20,7 +20,7 @@ module.exports = {
 
   output: {
     filename: 'webpack-bundle.js',
-    path: resolve('..', paths.output, paths.entry),
+    path: resolve('..', paths.output, paths.assets),
     pathinfo: true,
   },
 

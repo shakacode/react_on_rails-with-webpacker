@@ -7,11 +7,10 @@ const configPath = resolve('..', 'config', 'webpack');
 const paths = safeLoad(readFileSync(join(configPath, 'paths.yml'), 'utf8'))[env.NODE_ENV];
 const devServer = safeLoad(readFileSync(join(configPath, 'development.server.yml'), 'utf8'))[env.NODE_ENV];
 
-const assetsPath = paths.entry;
 const productionBuild = env.NODE_ENV === 'production';
 
 const publicPath = !productionBuild && devServer.enabled ?
-  `http://${devServer.host}:${devServer.port}/` : `/${assetsPath}/`;
+  `http://${devServer.host}:${devServer.port}/` : `/${paths.assets}/`;
 
 module.exports = {
   devServer,
