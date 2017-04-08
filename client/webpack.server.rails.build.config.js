@@ -1,9 +1,9 @@
 const { resolve } = require('path');
 const merge = require('webpack-merge');
-const devConfig = require('./webpack.client.base.config.js');
+const baseConfig = require('./webpack.client.base.config.js');
 const { devServer, publicPath, paths } = require('./webpackConfigLoader.js');
 
-module.exports = merge(devConfig, {
+module.exports = merge(baseConfig, {
   devServer: {
     host: devServer.host,
     port: devServer.port,
