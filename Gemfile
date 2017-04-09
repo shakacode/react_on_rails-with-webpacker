@@ -7,7 +7,7 @@ end
 
 gem 'react_on_rails', '6.9.3'
 
-gem 'webpacker_lite', '0.0.2', path: '../webpacker_lite'
+gem 'webpacker_lite', '0.0.3' # , path: '../webpacker_lite'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
