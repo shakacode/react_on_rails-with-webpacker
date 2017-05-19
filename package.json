@@ -9,6 +9,7 @@
   "scripts": {
     "postinstall": "cd client && yarn install",
     "rails-server": "echo 'visit http://localhost:3000/hello_world' && foreman start -f Procfile.dev",
+    "install-react-on-rails": "cd client && yarn run install-react-on-rails",
     "test": "rspec"
   }
 }
