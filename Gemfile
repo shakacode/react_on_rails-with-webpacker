@@ -5,9 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'react_on_rails', '6.9.1'
+gem 'react_on_rails', path: '../react_on_rails'
 
-gem 'webpacker-lite', '0.0.2', github: 'shakacode/webpacker-lite'
+gem 'webpacker_lite', path: '../webpacker_lite'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
